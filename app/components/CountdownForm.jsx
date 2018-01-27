@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 
 var CountdownForm = React.createClass({
     onSubmit: function (e) {
