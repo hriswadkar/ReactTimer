@@ -25,13 +25,13 @@ describe('Countdown', () => {
             }, 1001);
         });
 
-        it('should set state to 0 if it reaches negative value', (done) => {
+        it('should never set count less than zero', (done) => {
             var countdown = TestUtils.renderIntoDocument(<Countdown />);
             countdown.handleSetCountdown(1);
             setTimeout(() => {
                 expect(countdown.state.count).toBe(0);
                 done();
-            }, 3000);
+            }, 3001);
         });        
     });
 });
